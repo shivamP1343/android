@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFEB3B"
+    tools:context="com.example.pncapp.RelativeActivity">
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:textStyle="bold"
+        android:textAllCaps="true"
+        android:textSize="17sp"
+        android:text="Two Button will use me as a reference" />
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Aligned to the\nsecond button"
+        android:layout_below="@+id/textView"
+        android:layout_alignLeft="@+id/textView"
+        android:layout_margin="5dp"
+        android:layout_alignStart="@+id/textView" />
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Aligned to the\nfirst button"
+        android:layout_toRightOf="@id/button"
+        android:layout_alignTop="@id/button"
+        android:layout_below="@+id/textView"
+        android:layout_marginRight="21dp"
+        android:layout_marginEnd="21dp" />
+
+    <TextView
+        android:id="@+id/textView5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/button"
+        android:layout_alignStart="@+id/button"
+        android:layout_below="@+id/button"
+        android:layout_marginTop="70dp"
+        android:textStyle="bold|italic"
+        android:textSize="20sp"
+        android:textColor="#25c"
+        android:text="I want to align by base\nline with you" />
+
+    <TextView
+        android:id="@+id/textView6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/textView5"
+        android:layout_alignTop="@+id/textView5"
+        android:layout_margin="10dp"
+        android:textSize="20sp"
+        android:textStyle="bold|italic"
+        android:textColor="#25c"
+        android:layout_marginTop="70dp"
+        android:layout_alignBaseline="@id/textView5"
+        android:text="Okay,let me use the attribute" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentLeft="true"
+        android:textAllCaps="true"
+        android:textStyle="bold"
+        android:textSize="20sp"
+        android:textColor="#D50000"
+        android:text="Heellooo"/>
+</RelativeLayout>

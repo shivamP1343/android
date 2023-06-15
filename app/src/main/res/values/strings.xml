@@ -1,0 +1,24 @@
+<resources>
+    <string name="app_name">PNCApp</string>
+    <string name="txt_name">Name</string>
+    <string name="my_app_name">Welcome to App</string>
+    <string name="main_name">WelCome to Logout Example</string>
+    <string name="linear">Linear Layout</string>
+    <string name="relative">Relative Layout</string>
+    <string name="absoulte">Absoulte Layout</string>
+    <string name="table">Table Layout</string>
+    <string name="constraint">Constraint Layout</string>
+    <string-array name="spinner_items">
+        <item>Item 1</item>
+        <item>Item 2</item>
+        <item>Item 3</item>
+        <item>Item 4</item>
+    </string-array>
+    <string-array name="state">
+        <item>Province 1</item>
+        <item>Province 2</item>
+        <item>Province 3</item>
+        <item>Province 4</item>
+        <item>Province 5</item>
+    </string-array>
+</resources>
