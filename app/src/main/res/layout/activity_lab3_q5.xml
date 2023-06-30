@@ -1,9 +1,81 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".Lab3Q5">
+    android:orientation="vertical"
+    android:layout_margin="5dp"
+    android:layout_height="match_parent">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Enter Id"
+        android:inputType="number"
+        android:id="@+id/edtId" />
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Enter Name"
+        android:inputType="textPersonName"
+        android:layout_below="@+id/edtId"
+        android:id="@+id/edtName" />
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Enter Email"
+        android:inputType="textEmailAddress"
+        android:layout_below="@+id/edtName"
+        android:id="@+id/edtEmail" />
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Enter Phone"
+        android:inputType="number"
+        android:layout_below="@+id/edtEmail"
+        android:id="@+id/edtPhone" />
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Enter Feedback Message"
+        android:inputType="textShortMessage"
+        android:layout_below="@+id/edtPhone"
+        android:id="@+id/edtMessage" />
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/edtMessage"
+        android:id="@+id/btnInsert"
+        android:text="Insert" />
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/edtMessage"
+        android:layout_toRightOf="@+id/btnInsert"
+        android:id="@+id/btnSelect"
+        android:layout_marginLeft="10dp"
+        android:text="Select" />
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/edtMessage"
+        android:layout_toRightOf="@+id/btnSelect"
+        android:id="@+id/btnUpdate"
+        android:layout_marginLeft="10dp"
+        android:text="Update" />
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/edtMessage"
+        android:layout_toRightOf="@+id/btnUpdate"
+        android:id="@+id/btnDelete"
+        android:layout_marginLeft="10dp"
+        android:text="Delete" />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Selected Data:"
+        android:layout_below="@+id/btnSelect"
+        android:layout_marginTop="10dp"
+        android:id="@+id/txtData"
+        android:textSize="18sp" />
+</RelativeLayout>

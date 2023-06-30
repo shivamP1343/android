@@ -1,56 +1,41 @@
 package com.example.pncapp;
 
-import android.content.Context;
+import android.annotation.SuppressLint;
+import android.app.Activity;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.BaseAdapter;
+import android.widget.ArrayAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import java.util.List;
+public class CustomItemAdapter extends ArrayAdapter<String> {
+    Activity context;
+    String[] title;
+    String[] price;
+    int[] image;
 
-public class ProductAdapter extends BaseAdapter {
-    private Context context;
-    private List<Product> productList;
-
-    public ProductAdapter(Context context, List<Product> productList) {
+    public CustomItemAdapter(Activity context, String[] title, String[] price, int[] image) {
+        super(context, R.layout.custom_list, title);
         this.context = context;
-        this.productList = productList;
-    }
-
-    @Override
-    public int getCount() {
-        return productList.size();
-    }
-
-    @Override
-    public Object getItem(int position) {
-        return productList.get(position);
-    }
-
-    @Override
-    public long getItemId(int position) {
-        return position;
+        this.title = title;
+        this.price = price;
+        this.image = image;
     }
 
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
-        LayoutInflater inflater = LayoutInflater.from(context);
-        View view = inflater.inflate(R.layout.grid_item_layout, null);
+        LayoutInflater inflater = context.getLayoutInflater();
+        View rowv = inflater.inflate(R.layout.custom_list, null, true);
 
-        ImageView imageView = view.findViewById(R.id.imageView);
-        TextView titleTextView = view.findViewById(R.id.titleTextView);
-        TextView priceTextView = view.findViewById(R.id.priceTextView);
-
-        Product product = productList.get(position);
-
-        imageView.setImageResource(product.getImage());
-        titleTextView.setText(product.getTitle());
-        priceTextView.setText(String.valueOf(product.getPrice()));
-
-        return view;
+        @SuppressLint({"MissingInflatedId", "LocalSuppress"}) TextView txtTitle = rowv.findViewById(R.id.title);
+        @SuppressLint({"MissingInflatedId", "LocalSuppress"}) ImageView imageView = rowv.findViewById(R.id.image);
+        @SuppressLint({"MissingInflatedId", "LocalSuppress"}) TextView txtdes = rowv.findViewById(R.id.price);
+        Log.d("test",title[position]);
+        txtTitle.setText(title[position]);
+        imageView.setImageResource(image[position]);
+        txtdes.setText(price[position]);
+        return rowv;
     }
 }
-
-
